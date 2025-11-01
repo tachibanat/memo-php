@@ -1,7 +1,25 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="ja">
   <?php 
     session_start();
+=======
+<?php
+    session_start();
+
+    // 🔽 追加する部分
+    require '../common/auth.php';
+
+    if (isLogin()) {
+        header('Location: ../memo/');
+        exit;
+    }
+?>
+<!DOCTYPE html>
+<html lang="ja">
+  <?php 
+  
+>>>>>>> 9e0fe2d (第18回まで終了)
     include_once "../common/header.php"; //指定されたファイルを一度だけ読み込む
     $title = "ユーザー登録";
     echo getHeader($title); //head.phpに定義されているgrtHeader    
